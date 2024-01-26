@@ -3,29 +3,19 @@
 
 
 # Projeyi çalıştırmak için yapılması gerekenler
-> 1. hardhat.config.js adında bir dosya olusturun
+> 1. `.env` adında bir dosya olusturun
 >
-> 2. hardhat.config.js nın içine girin ve kendinize özgü configlerinizi oluşturun
+> 2. `.env` nın içine girin ve kendinize özgü configlerinizi oluşturun
 >  Örnek:
 >     ``` js
->     require("@nomiclabs/hardhat-waffle");
+>     ETH_RPC="infura gibi sitelerden alınan link"
 >
->      const PRIVATE_KEY = "Kendi private key inizi giriniz";
->      
->      
->      module.exports = {
->          solidity: "0.8.2",
->          networks: {
->            mainnet: {
->              url: `https://api.avax.network/ext/bc/C/rpc`,
->                accounts: [`${PRIVATE_KEY}`]
->            },
->            eth: {
->              url: `ornek infuradan bu linki ala bilirsiniz`,
->                accounts: [`${PRIVATE_KEY}`]
->            }
->          }
->      };
+>     ETH_PK1="private keyiniz"
+>     ETH_K1="public keyiniz"
+>     ETH_PK2="private keyiniz"
+>     ETH_K1="public keyiniz"
+>     ETH_PK3="private keyiniz"
+>     ETH_K1="public keyiniz"
 >
 > 3. Projedeki leri deoploy etme
 > Örnek:
