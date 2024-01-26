@@ -2,7 +2,7 @@ const { ethers } = require("ethers");
 //const { expect, use } = require('chai');
 const denemejson = require('../artifacts/contracts/deneme.sol/Counter.json');
 
-const provider = new ethers.providers.JsonRpcProvider("Kendi bağlantı adresiniz");
+const provider = new ethers.providers.JsonRpcProvider(process.env.ETH_RPC);
 
  // borc sıstemının Kontrat adresi
  const contractAddress = "0xD34F978487e1C709f4bd44179c58d148469aD9a7";
@@ -10,7 +10,7 @@ const provider = new ethers.providers.JsonRpcProvider("Kendi bağlantı adresini
 
  // Ethereum hesabını belirleme (örneğin, özel anahtar kullanarak)
  //user1
- const privateKey = "Kendi private keyiniz"; //hesap 2 nın 
+ const privateKey = process.env.ETH_PK1; //hesap 2 nın 
 
  const wallet = new ethers.Wallet(privateKey, provider);
 
